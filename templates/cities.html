@@ -4,16 +4,14 @@
         <title>Flask Cities</title>
     </HEAD>
     <BODY>
-        {% if cities_list %}
-        {% for k, v in cities_list.items() %}
-        {{k}}   {{v}} <br/>
+        {% for x in cities_list %}
+        {{x}}
         {% endfor %}
-        {% endif %}
         <br/>
 
         <form method="post">
             Nazwa miasta <input type="text" name="name"><br/>
-            <input type="submit" value="Dodaj"> <br/>
+            <input type="submit" value="Dodaj"><br/>
         </form>
         {% if error %}
         {{ error }} <br/>
