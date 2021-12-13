@@ -1,1 +1,15 @@
- 
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <title>Flask Cities</title>
+    </HEAD>
+    <BODY>
+        <form method="post">
+            Nazwa miasta <input type="text" name="name"><br/>
+            <input type="submit" value="Dodaj">
+        </form>
+        {% if error %}
+        {{ error }}
+        {% endif %}
+    </BODY>
+</HTML>
