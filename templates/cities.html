@@ -4,12 +4,20 @@
         <title>Flask Cities</title>
     </HEAD>
     <BODY>
+        {% if cities_list %}
+        {% for k, v in cities_list.items() %}
+        {{k}}   {{v}} <br/>
+        {% endfor %}
+        {% endif %}
+        <br/>
+
         <form method="post">
             Nazwa miasta <input type="text" name="name"><br/>
-            <input type="submit" value="Dodaj">
+            <input type="submit" value="Dodaj"> <br/>
         </form>
         {% if error %}
-        {{ error }}
+        {{ error }} <br/>
         {% endif %}
+        <a href="{{ url_for('cities.index') }}">Powrót</a>
     </BODY>
 </HTML>
